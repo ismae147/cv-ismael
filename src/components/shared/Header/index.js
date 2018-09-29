@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import {Container} from '../helpers';
+import {Wrap} from '../helpers';
 
 const Div = styled.div`
   display: flex;
@@ -22,9 +22,9 @@ export default class Header extends Component {
   render() {
     return (
       <Div>
-        <Container>
+        <Wrap>
           <Title>{this.props.title}</Title>
-        </Container>
+        </Wrap>
       </Div>
     );
   }
