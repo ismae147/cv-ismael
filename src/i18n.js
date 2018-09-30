@@ -5,17 +5,21 @@ i18n.use(LanguageDetector).init({
   // we init with resources
   resources: {
     en: {
-      translations: {
-        Hello: "Hello"
+      MainInformation: {
+        "Born": "Born",
+        "March 18, 1997 (age <1>{{age}}</1>)":
+          "March 18, 1997 (age <1>{{age}}</1>)"
       }
     },
     es: {
-      translations: {
-        Hello: "Hola"
+      MainInformation: {
+        "Born": "Nacimiento",
+        "March 18, 1997 (age <1>{{age}}</1>)":
+          "Marzo 18, 1997 (edad <1>{{age}}</1>)"
       }
     }
   },
-  fallbackLng: "en",
+  fallbackLng: "es",
   debug: true,
 
   // have a common namespace used around the full app

@@ -18,12 +18,6 @@ export const Box = styled.div`
 `;
 
 export const Div = styled.div`
-  padding: 1rem;
-`;
-
-export const Flex = styled(Div)`
-  display: flex;
-  justify-content: space-between;
 `;
 
 export const Text = styled.p`
@@ -55,9 +49,9 @@ export const Text = styled.p`
               : props.color};
   font-weight: ${props =>
     props.bold
-      ? "var(--primaryColor)"
+      ? "bold"
       : props.normal
-        ? "var(--secondaryColor)"
+        ? "normal"
         : props.weight
           ? props.weight
           : "normal"};

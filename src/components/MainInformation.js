@@ -1,14 +1,16 @@
 import React, { Component } from "react";
-import { Wrap, Text, Div, Flex } from "./shared/helpers";
+import { Wrap, Text, Div } from "./shared/helpers";
+import { Flex } from "../theme/grid";
 import styled from "styled-components";
 import { translate, Trans } from "react-i18next";
+import Moment from "moment";
 
-export const BoxInformation = styled.div`
+const BoxInformation = styled.div`
   padding: 5rem 0;
   display: grid;
   position: relative;
   background-image: url("./img/gravel.png");
-  
+
   &:before {
     content: "";
     position: absolute;
@@ -16,11 +18,15 @@ export const BoxInformation = styled.div`
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to right, var(--primaryColor) 0%, rgba(65, 76, 112,.7) 100%);
+    background: linear-gradient(
+      to right,
+      var(--primaryColor) 0%,
+      rgba(65, 76, 112, 0.7) 100%
+    );
   }
 `;
 
-export const ImageProfile = styled.img`
+const ImageProfile = styled.img`
   --sizeImageProfile: 15rem;
   width: var(--sizeImageProfile);
   background-image: URL("./img/me.jpg");
@@ -31,17 +37,20 @@ export const ImageProfile = styled.img`
   box-shadow: 0 0 22px 0px rgba(0, 0, 0, 0.5);
 `;
 
-export const Information = styled.div`
+const Information = styled.div`
   display: flex;
 `;
 
 class MainInformation extends Component {
   render() {
+    const age = Math.abs(Moment().diff(Moment("1997-03-18"), "years"));
+
     return (
       <BoxInformation>
-        <Wrap style={{
-          zIndex: 1
-        }}>
+        <Wrap
+          style={{
+            zIndex: 1
+          }}>
           <Information>
             <Div>
               <ImageProfile />
@@ -50,7 +59,17 @@ class MainInformation extends Component {
               <Text biggest color="white">
                 Ismael Cortegana Malla
               </Text>
-              <Flex />
+              <Flex>
+                <Flex>
+                  <Text normal bold color="white">
+                    <Trans>Born</Trans>
+                    {': '}
+                  </Text>
+                  <Text normal color="white">
+                    <Trans age={age}>March 18, 1997 (age {{age}})</Trans>
+                  </Text>
+                </Flex>
+              </Flex>
             </Div>
           </Information>
         </Wrap>
@@ -59,4 +78,4 @@ class MainInformation extends Component {
   }
 }
 
-export default translate("translations")(MainInformation);
+export default translate("MainInformation")(MainInformation);
