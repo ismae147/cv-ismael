@@ -4,8 +4,8 @@ import { injectGlobal } from "styled-components";
 injectGlobal`
 :root {
   --primaryColor: #353F60;
-  --secondaryColor: #6F99FE;
-  --thirtyColor: #72CE90;
+  --secondaryColor: #7818DE;
+  --thirtyColor: #A10AD5 ;
   --borderColor: #DEE0E2;
   --grayColor: #F6F8FB;
 }
@@ -26,7 +26,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: var(--primaryColor);
-  background-color: var(--grayColor);
+  background: linear-gradient(to right, #FDFBFB, #EBEDEE 70%);
 }
 
 ::-webkit-scrollbar{

@@ -53,7 +53,7 @@ class MainInformation extends Component {
           }}>
           <Information>
             <Div>
-              <ImageProfile />
+              {/* <ImageProfile /> */}
             </Div>
             <Div>
               <Text biggest color="white">

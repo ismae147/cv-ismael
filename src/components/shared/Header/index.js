@@ -4,12 +4,62 @@ import styled from "styled-components";
 import { Wrap, Text } from "../helpers";
 import { Flex } from "./../../../theme/grid";
 import { translate } from "react-i18next";
+import { primaryColor } from "./../colors";
 
 const Div = styled.div`
   display: flex;
-  height: 8rem;
+  height: 10rem;
   align-items: center;
   background-color: white;
+`;
+
+const TextCustom = styled(Text)`
+  position: relative;
+  text-indent: -3px;
+  user-select: none;
+  background: linear-gradient(
+    to right,
+    var(--thirtyColor) 0%,
+    var(--secondaryColor) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  &:before {
+    height: 0.2rem;
+    width: 25%;
+    content: "";
+    position: absolute;
+    background: linear-gradient(
+      to right,
+      var(--thirtyColor) 0%,
+      var(--secondaryColor) 100%
+    );
+    bottom: 0.5rem;
+    left: 0;
+    transition: all 0.5s;
+  }
+  &:hover {
+    &:before {
+      width: 100%;
+    }
+    &:after {
+      width: 100%;
+    }
+  }
+  &:after {
+    height: 0.2rem;
+    width: 25%;
+    content: "";
+    position: absolute;
+    background: linear-gradient(
+      to right,
+      var(--thirtyColor) 0%,
+      var(--secondaryColor) 100%
+    );
+    top: 0.5rem;
+    right: 0;
+    transition: all 0.5s;
+  }
 `;
 
 const LenguageItem = styled.span`
@@ -56,7 +106,12 @@ class Header extends Component {
         <Wrap>
           <Flex justify="space-between">
             <Div>
-              <Text biggest fontFamily="'Expletus Sans', cursive" weight="700">{this.props.title}</Text>
+              <TextCustom
+                biggest
+                fontFamily="'Expletus Sans', cursive"
+                weight="700">
+                {this.props.title}
+              </TextCustom>
             </Div>
             <Div>
               <LenguageItem
