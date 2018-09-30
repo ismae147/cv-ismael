@@ -6,7 +6,7 @@ export default class Content extends Component {
   render() {
     return (
       <div>
-        <Header title="Ismael"/>
+        <Header title="DevCore"/>
         <MainInformation />
       </div>
     )

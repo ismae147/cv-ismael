@@ -12,10 +12,6 @@ const Div = styled.div`
   background-color: white;
 `;
 
-const Title = styled.div`
-  font-size: 3rem;
-`;
-
 const LenguageItem = styled.span`
   position: relative;
 
@@ -49,7 +45,7 @@ class Header extends Component {
   };
 
   render() {
-    const { t, i18n } = this.props;
+    const { i18n } = this.props;
 
     const changeLanguage = lng => {
       i18n.changeLanguage(lng);
@@ -60,7 +56,7 @@ class Header extends Component {
         <Wrap>
           <Flex justify="space-between">
             <Div>
-              <Text biggest>{this.props.title}</Text>
+              <Text biggest fontFamily="'Expletus Sans', cursive" weight="700">{this.props.title}</Text>
             </Div>
             <Div>
               <LenguageItem

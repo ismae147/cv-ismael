@@ -21,6 +21,7 @@ export const Div = styled.div`
 `;
 
 export const Text = styled.p`
+  font-family: ${props => (props.fontFamily?props.fontFamily:'inherint')};
   font-size: ${props =>
     props.biggest
       ? "3.6rem"

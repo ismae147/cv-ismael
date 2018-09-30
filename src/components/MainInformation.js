@@ -57,7 +57,7 @@ class MainInformation extends Component {
             </Div>
             <Div>
               <Text biggest color="white">
-                Ismael Cortegana Malla
+                Better Design
               </Text>
               <Flex>
                 <Flex>

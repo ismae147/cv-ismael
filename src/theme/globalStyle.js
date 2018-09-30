@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  font-family: 'Sarala', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.6;
