@@ -1,15 +1,23 @@
 import React, { Component } from "react";
 import { Wrap, Text, Div, Flex } from "./shared/helpers";
 import styled from "styled-components";
+import { translate, Trans } from "react-i18next";
 
 export const BoxInformation = styled.div`
   padding: 5rem 0;
   display: grid;
-  background: #005bea;
-  background: #000000;
-  background: -moz-linear-gradient(to right, #000000 0%, #0a1852 100%);
-  background: -webkit-linear-gradient(to right, #000000 0%, #0a1852 100%);
-  background: linear-gradient(to right, #000000 0%, #0a1852 100%);
+  position: relative;
+  background-image: url("./img/gravel.png");
+  
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, var(--primaryColor) 0%, rgba(65, 76, 112,.7) 100%);
+  }
 `;
 
 export const ImageProfile = styled.img`
@@ -27,21 +35,22 @@ export const Information = styled.div`
   display: flex;
 `;
 
-
 class MainInformation extends Component {
   render() {
     return (
       <BoxInformation>
-        <Wrap>
+        <Wrap style={{
+          zIndex: 1
+        }}>
           <Information>
             <Div>
               <ImageProfile />
             </Div>
             <Div>
-              <Text biggest color="white">Ismael Cortegana Malla</Text>
-              <Flex>
-                
-              </Flex>
+              <Text biggest color="white">
+                Ismael Cortegana Malla
+              </Text>
+              <Flex />
             </Div>
           </Information>
         </Wrap>
@@ -50,4 +59,4 @@ class MainInformation extends Component {
   }
 }
 
-export default MainInformation;
+export default translate("translations")(MainInformation);
