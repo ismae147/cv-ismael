@@ -6,5 +6,6 @@
   "prettier.eslintIntegration": true,
   "files.associations": {
     "*.js": "javascriptreact"
-  }
+  },
+  "terminal.external.windowsExec": "C:\\Program Files\\Git\\bin\\bash.exe",
 }

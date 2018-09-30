@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@gandi/react-translate": "^1.0.3",
     "cleave.js": "^1.4.4",
     "fetchival": "^0.3.3",
     "moment": "^2.22.2",

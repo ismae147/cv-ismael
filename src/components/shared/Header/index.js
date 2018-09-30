@@ -9,7 +9,6 @@ const Div = styled.div`
   align-items: center;  
   font-size: 3rem;
   background-color: white;
-  box-shadow: 0 0  5px 1px var(--borderColor);
 `;
 
 const Title = styled.div``;
