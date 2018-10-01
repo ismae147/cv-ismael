@@ -6,24 +6,9 @@ import { translate, Trans } from "react-i18next";
 import Moment from "moment";
 
 const BoxInformation = styled.div`
-  padding: 5rem 0;
+  padding: 15rem 0;
   display: grid;
   position: relative;
-  background-image: url("./img/gravel.png");
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(
-      to right,
-      var(--primaryColor) 0%,
-      rgba(65, 76, 112, 0.7) 100%
-    );
-  }
 `;
 
 const ImageProfile = styled.img`
@@ -41,6 +26,22 @@ const Information = styled.div`
   display: flex;
 `;
 
+const TextPaimted = styled(Text)`
+  background: linear-gradient(
+    to right,
+    ${props => props.colors[0]} 0%,
+    ${props => props.colors[1]} 100%
+  );
+  font-size: 10rem;
+  user-select: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;
+
+const Description = styled.p`
+  width: 60%;
+`;
+
 class MainInformation extends Component {
   render() {
     const age = Math.abs(Moment().diff(Moment("1997-03-18"), "years"));
@@ -52,25 +53,20 @@ class MainInformation extends Component {
             zIndex: 1
           }}>
           <Information>
-            <Div>
-              {/* <ImageProfile /> */}
-            </Div>
-            <Div>
-              <Text biggest color="white">
-                Better Design
-              </Text>
-              <Flex>
-                <Flex>
-                  <Text normal bold color="white">
-                    <Trans>Born</Trans>
-                    {': '}
-                  </Text>
-                  <Text normal color="white">
-                    <Trans age={age}>March 18, 1997 (age {{age}})</Trans>
-                  </Text>
-                </Flex>
-              </Flex>
-            </Div>
+            <Wrap>
+              <TextPaimted
+                fontFamily="Roboto, san-serif"
+                bold
+                colors={["var(--thirtyColor)", "var(--secondaryColor)"]}>
+                <Trans>Hi, I'm Ismael</Trans>
+              </TextPaimted>
+              <Description>
+                <Text fontFamily="'Playfair Display', serif" big bold>
+                  Ven y llama a mi puerta, estaré muy feliz de ser tu compañero,
+                  y hagamos algo grandioso juntos.
+                </Text>
+              </Description>
+            </Wrap>
           </Information>
         </Wrap>
       </BoxInformation>

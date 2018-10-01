@@ -26,7 +26,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: var(--primaryColor);
-  background: linear-gradient(to right, #FDFBFB, #EBEDEE 70%);
+  background: white;
 }
 
 ::-webkit-scrollbar{

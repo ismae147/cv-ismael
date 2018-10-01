@@ -10,7 +10,7 @@ const Div = styled.div`
   display: flex;
   height: 10rem;
   align-items: center;
-  background-color: white;
+  background: transparent;  
 `;
 
 const TextCustom = styled(Text)`
@@ -56,7 +56,7 @@ const TextCustom = styled(Text)`
       var(--thirtyColor) 0%,
       var(--secondaryColor) 100%
     );
-    top: 0.5rem;
+    top: 0.2rem;
     right: 0;
     transition: all 0.5s;
   }
