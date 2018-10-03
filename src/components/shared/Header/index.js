@@ -10,7 +10,7 @@ const Div = styled.div`
   display: flex;
   height: 10rem;
   align-items: center;
-  background: transparent;  
+  background: transparent;
 `;
 
 const TextCustom = styled(Text)`

@@ -8,14 +8,18 @@ i18n.use(LanguageDetector).init({
       MainInformation: {
         "Hi, I'm Ismael": "Hi, I'm Ismael",
         "March 18, 1997 (age <1>{{age}}</1>)":
-          "March 18, 1997 (age <1>{{age}}</1>)"
+          "March 18, 1997 (age <1>{{age}}</1>)",
+        textInformation1:
+          "Come and knock on my door, I will be very happy to be your partner, and do something great together."
       }
     },
     es: {
       MainInformation: {
         "Hi, I'm Ismael": "Hola, Soy Ismael",
         "March 18, 1997 (age <1>{{age}}</1>)":
-          "Marzo 18, 1997 (edad <1>{{age}}</1>)"
+          "Marzo 18, 1997 (edad <1>{{age}}</1>)",
+        textInformation1:
+          "Ven y llama a mi puerta, estaré muy feliz de ser tu compañero, y hagamos algo grandioso juntos."
       }
     }
   },

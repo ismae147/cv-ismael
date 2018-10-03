@@ -5,6 +5,18 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div id="particle-container">
+          <div className="particle2"></div>
+          <div className="particle2"></div>
+          <div className="particle2"></div>
+          <div className="particle2"></div>
+          <div className="particle2"></div>
+          <div className="particle2"></div>
+          <div className="particle2"></div>
+          <div className="particle2"></div>
+          <div className="particle2"></div>
+          <div className="particle2"></div>
+        </div>
         <Content />
       </div>
     );

@@ -11,17 +11,6 @@ const BoxInformation = styled.div`
   position: relative;
 `;
 
-const ImageProfile = styled.img`
-  --sizeImageProfile: 15rem;
-  width: var(--sizeImageProfile);
-  background-image: URL("./img/me.jpg");
-  background-size: var(--sizeImageProfile);
-  height: var(--sizeImageProfile);
-  background-position: center;
-  border-radius: 50%;
-  box-shadow: 0 0 22px 0px rgba(0, 0, 0, 0.5);
-`;
-
 const Information = styled.div`
   display: flex;
 `;
@@ -39,13 +28,13 @@ const TextPaimted = styled(Text)`
 `;
 
 const Description = styled.p`
-  width: 60%;
+  width: 45%;
 `;
 
 class MainInformation extends Component {
   render() {
     const age = Math.abs(Moment().diff(Moment("1997-03-18"), "years"));
-
+    const { t } = this.props;
     return (
       <BoxInformation>
         <Wrap
@@ -61,9 +50,8 @@ class MainInformation extends Component {
                 <Trans>Hi, I'm Ismael</Trans>
               </TextPaimted>
               <Description>
-                <Text fontFamily="'Playfair Display', serif" big bold>
-                  Ven y llama a mi puerta, estaré muy feliz de ser tu compañero,
-                  y hagamos algo grandioso juntos.
+                <Text big bold>
+                  {t("textInformation1")}
                 </Text>
               </Description>
             </Wrap>
