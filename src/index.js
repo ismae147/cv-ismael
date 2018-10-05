@@ -1,16 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
-//import "normalize.css";
-import "./theme/globalStyle";
-import App from "./components/App";
 import registerServiceWorker from "./registerServiceWorker";
-import i18n from "./i18n";
-import { I18nextProvider } from "react-i18next";
+import { Provider } from "react-redux";
+/* Configurations */
+import store from "./services/store";
+/* Styles */
+import "normalize.css";
+import "./styles/globalStyle";
+/* Components */
+import App from "./components/App";
 
 ReactDOM.render(
-  <I18nextProvider i18n={i18n}>
+  <Provider store={store}>
     <App />
-  </I18nextProvider>,
+  </Provider>,
   document.getElementById("root")
 );
 registerServiceWorker();

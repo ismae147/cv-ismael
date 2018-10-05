@@ -1,19 +1,14 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import { Text } from "../helpers";
 import styled from "styled-components";
-import { Wrap, Text } from "../helpers";
-import { Flex } from "./../../../theme/grid";
-import { translate } from "react-i18next";
-import { primaryColor } from "./../colors";
 
-const Div = styled.div`
+export const Div = styled.div`
   display: flex;
   height: 10rem;
   align-items: center;
   background: transparent;
 `;
 
-const TextCustom = styled(Text)`
+export const TextCustom = styled(Text)`
   position: relative;
   text-indent: -3px;
   user-select: none;
@@ -62,7 +57,7 @@ const TextCustom = styled(Text)`
   }
 `;
 
-const LenguageItem = styled.span`
+export const LenguageItem = styled.span`
   position: relative;
 
   &:hover {
@@ -88,51 +83,3 @@ const LenguageItem = styled.span`
     margin-left: 2rem;
   }
 `;
-
-class Header extends Component {
-  static propTypes = {
-    title: PropTypes.string.isRequired
-  };
-
-  render() {
-    const { i18n } = this.props;
-
-    const changeLanguage = lng => {
-      i18n.changeLanguage(lng);
-    };
-
-    return (
-      <Div>
-        <Wrap>
-          <Flex justify="space-between">
-            <Div>
-              <TextCustom
-                biggest
-                fontFamily="'Expletus Sans', cursive"
-                weight="700">
-                {this.props.title}
-              </TextCustom>
-            </Div>
-            <Div>
-              <LenguageItem
-                onClick={() => {
-                  changeLanguage("es");
-                }}>
-                ES{" "}
-              </LenguageItem>{" "}
-              <LenguageItem
-                onClick={() => {
-                  changeLanguage("en");
-                }}>
-                {" "}
-                EN{" "}
-              </LenguageItem>
-            </Div>
-          </Flex>
-        </Wrap>
-      </Div>
-    );
-  }
-}
-
-export default translate("MainInformation")(Header);

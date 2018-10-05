@@ -5,7 +5,7 @@ i18n.use(LanguageDetector).init({
   // we init with resources
   resources: {
     en: {
-      MainInformation: {
+      HomePage: {
         "Hi, I'm Ismael": "Hi, I'm Ismael",
         "March 18, 1997 (age <1>{{age}}</1>)":
           "March 18, 1997 (age <1>{{age}}</1>)",
@@ -14,7 +14,7 @@ i18n.use(LanguageDetector).init({
       }
     },
     es: {
-      MainInformation: {
+      HomePage: {
         "Hi, I'm Ismael": "Hola, Soy Ismael",
         "March 18, 1997 (age <1>{{age}}</1>)":
           "Marzo 18, 1997 (edad <1>{{age}}</1>)",

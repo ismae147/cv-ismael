@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import media from "./../../theme/media";
+import media from "./media";
 
 export const Wrap = styled.div`
   max-width: 80%;
@@ -17,11 +17,10 @@ export const Box = styled.div`
   background-color: white;
 `;
 
-export const Div = styled.div`
-`;
+export const Div = styled.div``;
 
 export const Text = styled.p`
-  font-family: ${props => (props.fontFamily?props.fontFamily:'inherit')};
+  font-family: ${props => (props.fontFamily ? props.fontFamily : "inherit")};
   font-size: ${props =>
     props.biggest
       ? "3.6rem"
