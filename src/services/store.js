@@ -13,7 +13,7 @@ if (
 } else {
   composeEnhancers = compose;
 }
-const store = preloadedState => {
+const configureStore = preloadedState => {
   return createStore(
     reducers,
     preloadedState,
@@ -21,4 +21,4 @@ const store = preloadedState => {
   );
 };
 
-export default store;
+export default configureStore;

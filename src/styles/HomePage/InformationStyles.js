@@ -2,9 +2,16 @@ import styled from "styled-components";
 import { Text } from "../helpers";
 
 export const BoxInformation = styled.div`
-  padding: 15rem 0;
-  display: grid;
+  display: flex;
   position: relative;
+  width: 100%;
+  height: calc(100vh - 10rem);
+  background-image: url("./img/me.png");
+  background-size: auto 90%;
+  background-repeat: no-repeat;
+  background-position-x: 101%;
+  background-position-y: 123%;
+  align-items: center;
 `;
 
 export const InformationStyle = styled.div`
@@ -23,6 +30,6 @@ export const TextPaimted = styled(Text)`
   -webkit-text-fill-color: transparent;
 `;
 
-export const Description = styled.p`
+export const TextDescription = styled(Text)`
   width: 45%;
 `;
